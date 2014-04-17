@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>echo</title>
+</head>
+<body>
+    <div class="container">
+        Type something: <input type="text" ng-model="echo"/>
+
+        <br/>
+        <br/>
+
+        Some content: {{ echo }}
+
+        <br/>
+        <br/>
+
+        Attributes: <span class="{{ echo }}">Is my class empty?</span>
+
+
+    </div>
+    <script src="scripts/angular.min.js"></script>
+</body>
+</html>

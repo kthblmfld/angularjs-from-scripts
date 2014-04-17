@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="pizza-shop">
+<head>
+    <title>Pizza Shop</title>
+</head>
+<body ng-controller="HomeController">
+<div class="container">
+    <header ng-include="'templates/header.html'"></header>
+
+    <h2>Our Pizzas:</h2>
+    <div ng-repeat="pizza in pizzas">
+
+        <h3>{{ pizza.name }}</h3>
+
+        <strong>Toppings:</strong>
+        <span ng-repeat="ingredient in pizza.ingredients">
+            {{ ingredient }}{{$last ? '' : ', '}}
+        </span>
+
+        <div>
+            <strong>Price:</strong>
+            <span>{{ pizza.price | currency}}</span>
+        </div>
+    </div>
+</div>
+
+<script src="scripts/angular.js"></script>
+<script src="scripts/angular-route.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
