@@ -35,3 +35,10 @@ Deeper spread of states and nesting down the path of Walt's passion
 5-scope
 -------
 
+Data sharing between different controllers using a shared service.
+
+
+6-performance-refactor
+----------------------
+
+
