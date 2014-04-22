@@ -48,37 +48,42 @@ app
                 }
             });
     })
-    .controller('WaltsHistoryController', function($scope){
+    .controller('WaltsHistoryController', ['$scope','waltsHistoryService', function($scope, waltsHistoryService){
 
-        $scope.history = {
+        $scope.waltsHistoryService = waltsHistoryService;
+    }])
+    .service('waltsHistoryService', function(){
 
-            title: "Walt's History",
-            summary: "Walter was once a promising chemist and among the founders of the multi-billion "
-              + "dollar company Gray Matter Technologies, but he soon left, selling his shares for $5,000 "
-              + "for personal reasons and becoming an unhappy and disillusioned high school chemistry teacher. "
-              + "After being diagnosed with Stage IIIA lung cancer, he resorted to manufacturing high-purity "
-              + "pizza to ensure his family's financial security after his death."
-        }
+        this.title = "Walt's History";
+
+        this.summary =  "Walter was once a promising chemist and among the founders of the multi-billion "
+                + "dollar company Gray Matter Technologies, but he soon left, selling his shares for $5,000 "
+                + "for personal reasons and becoming an unhappy and disillusioned high school chemistry teacher. "
+                + "After being diagnosed with Stage IIIA lung cancer, he resorted to manufacturing high-purity "
+                + "pizza to ensure his family's financial security after his death.";
     })
     .controller('OpinionController', ['$scope','sharedThoughtService', function($scope, sharedThoughtService){
 
+        // handleFeedback is triggered by the ng-click in the home.html template
         $scope.handleFeedback = function(msg){
 
             sharedThoughtService.prepareBroadcast(msg);
         };
 
+        // watches handleBroadcast on the scope (in this case, rootScope)
+        // fetches customerFeedback from sharedThoughtService on broadcasted event
         $scope.$on('handleBroadcast', function(){
             $scope.customerFeedback = sharedThoughtService.customerFeedback;
         });
     }])
     .controller('JudgementController', ['$scope','sharedThoughtService', function($scope, sharedThoughtService){
         $scope.$on('handleBroadcast', function(){
-            $scope.customerFeedback = 'Judge says:' + sharedThoughtService.customerFeedback;
+            $scope.customerFeedback = 'Judge this: ' + sharedThoughtService.customerFeedback;
         });
     }])
     .controller('BeliefController', ['$scope','sharedThoughtService', function($scope, sharedThoughtService){
         $scope.$on('handleBroadcast', function(){
-            $scope.customerFeedback = 'Belief says: ' + sharedThoughtService.customerFeedback;
+            $scope.customerFeedback = 'Believe that: ' + sharedThoughtService.customerFeedback;
         });
     }])
     .factory('sharedThoughtService', ['$rootScope', function($rootScope){
@@ -86,6 +91,7 @@ app
         var sharedThought = {};
         sharedThought.customerFeedback = '';
 
+        // This function is exposed on the service provided by this factory and used by the OpinionController
         sharedThought.prepareBroadcast = function(msg){
 
             if(typeof msg != 'undefined'){
@@ -99,5 +105,4 @@ app
         };
 
         return sharedThought;
-
     }]);
