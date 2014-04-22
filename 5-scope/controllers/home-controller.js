@@ -51,7 +51,14 @@ app
     .controller('WaltsHistoryController', ['$scope','waltsHistoryService', function($scope, waltsHistoryService){
 
         $scope.waltsHistoryService = waltsHistoryService;
+        $scope.lifeEvents = ['washed his car', 'discovered a new pizza recipe'];
     }])
+    .controller('MonthEventsController',['$scope', function($scope){
+        $scope.lifeEvents = ['grew a beard', 'got stung by a bee', "addressed his son as 'Flynn'"];
+    }])
+    .controller('DayEventsController', function(){
+
+    })
     .service('waltsHistoryService', function(){
 
         this.title = "Walt's History";
