@@ -1,0 +1,65 @@
+<h2>{{ waltsHistoryService.title }}</h2>
+<p>
+    {{ waltsHistoryService.summary }}
+</p>
+
+<h3>Walt knew he had hit the big time when he
+    <span ng-repeat="event in lifeEvents">
+        {{ event }}
+        {{$last ? '.' : ' and '}}
+    </span>
+</h3>
+
+<div>
+    <span class="col-md-4">
+        <h4>Walt's Life Events:</h4>
+        <ul>
+            <li ng-repeat="event in lifeEvents">
+                {{ event }}
+            </li>
+        </ul>
+    </span>
+    <span ng-controller="MonthEventsController" class="col-md-4">
+        <h4>Walt's Month Events:</h4>
+        <ul>
+            <li ng-repeat="event in lifeEvents">
+                {{ event }}
+            </li>
+        </ul>
+    </span>
+    <span ng-controller="DayEventsController" class="col-md-4">
+        <h4>Walt's Day Events:</h4>
+        <ul>
+            <li ng-repeat="event in lifeEvents">
+                {{ event }}
+            </li>
+        </ul>
+    </span>
+</div>
+
+<div>
+    <span class="col-md-12">
+        <h4>Walt's Life Events:</h4>
+        <ul>
+            <li ng-repeat="event in lifeEvents">
+                {{ event }}
+            </li>
+        </ul>
+        <span ng-controller="MonthEventsController" class="text-info">
+        <h4>Walt's Month Events:</h4>
+            <ul>
+                <li ng-repeat="event in lifeEvents">
+                    {{ event }}
+                </li>
+            </ul>
+            <span ng-controller="DayEventsController" class="text-primary">
+                <h4>Walt's Day Events:</h4>
+                <ul>
+                    <li ng-repeat="event in lifeEvents">
+                        {{ event }}
+                    </li>
+                </ul>
+            </span>
+        </span>
+    </span>
+</div>
