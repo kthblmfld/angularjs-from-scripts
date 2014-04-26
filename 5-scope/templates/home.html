@@ -6,12 +6,15 @@
 <div data-ui-view></div>
 
 <div ng-controller="OpinionController">
-    <label class="col-md-2">Opinions?:</label><input ng-model="customerFeedback"/>
+    <label for="opinions" class="col-md-2 col-feedback">Opinions?:</label>
+    <input id="opinions" ng-model="customerFeedback"/>
     <button ng-click="handleFeedback(customerFeedback)">Submit</button>
 </div>
 <div ng-controller="JudgementController">
-    <label class="col-md-2">Judgements?:</label><input ng-model="customerFeedback"/>
+    <label for="judgements" class="col-md-2 col-feedback">Judgements?:</label>
+    <input id="judgements" ng-model="customerFeedback"/>
 </div>
 <div ng-controller="BeliefController">
-    <label class="col-md-2">Beliefs?:</label><input ng-model="customerFeedback"/>
+    <label for="beliefs" class="col-md-2 col-feedback">Beliefs?:</label>
+    <input id="beliefs" ng-model="customerFeedback"/>
 </div>
