@@ -9,50 +9,50 @@
     </span>
 </h3>
 
-<div>
-    <span class="col-md-4">
-        <h4>Walt's Life Events:</h4>
+<div class="container-life-event">
+    <div class="col-md-4 col-life-event">
+        <strong>Walt's Life Events:</strong>
         <ul>
             <li ng-repeat="event in lifeEvents">
                 {{ event }}
             </li>
         </ul>
-    </span>
-    <span ng-controller="MonthEventsController" class="col-md-4">
-        <h4>Walt's Month Events:</h4>
-        <ul>
+    </div>
+    <div class="col-md-4 col-life-event">
+        <strong>Walt's Month Events:</strong>
+        <ul ng-controller="MonthEventsController">
             <li ng-repeat="event in lifeEvents">
                 {{ event }}
             </li>
         </ul>
-    </span>
-    <span ng-controller="DayEventsController" class="col-md-4">
-        <h4>Walt's Day Events:</h4>
-        <ul>
+    </div>
+    <div class="col-md-4 col-life-event">
+        <strong>Walt's Day Events:</strong>
+        <ul ng-controller="DayEventsController">
             <li ng-repeat="event in lifeEvents">
                 {{ event }}
             </li>
         </ul>
-    </span>
+    </div>
 </div>
 
 <div>
     <span class="col-md-12">
-        <h4>Walt's Life Events:</h4>
+        <strong>Walt's Life Events:</strong>
         <ul>
             <li ng-repeat="event in lifeEvents">
                 {{ event }}
             </li>
         </ul>
         <span ng-controller="MonthEventsController" class="text-info">
-        <h4>Walt's Month Events:</h4>
+        <strong>Walt's Month Events:</strong>
             <ul>
                 <li ng-repeat="event in lifeEvents">
                     {{ event }}
                 </li>
             </ul>
             <span ng-controller="DayEventsController" class="text-primary">
-                <h4>Walt's Day Events:</h4>
+                <strong>Walt's Day Events:</strong>
                 <ul>
                     <li ng-repeat="event in lifeEvents">
                         {{ event }}

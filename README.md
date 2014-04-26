@@ -40,3 +40,7 @@ demonstrates scope sharing between controllers using a shared service. Another e
 history section illustrates the relationship between scope, controllers, and the Dom.
 
 
+6-directive
+-----------
+
+Some sample directives. Also: Grouping of modules/refactoring around features.
