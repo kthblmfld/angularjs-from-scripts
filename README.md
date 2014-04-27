@@ -49,11 +49,14 @@ Illustrates the relationship between scope, controllers, and the dom.
 
 Some sample directives. Also: Grouping of modules/refactoring around features.
 
-# Directives in this version:
+### Directives in this version:
+
 *product-directive (wp-product)*
+
 Applied as an attribute in header.html, this is a basic example
 of decorating attributes supplied via the dom element.
 *wrap-with-directive (wp-wrap-with)*
+
 Applied as an attribute in directions.html, this directive
 uses transclusion to wrap the target element with the template assigned to the directive (both
 templates defined in directions.html in this case).
