@@ -1,7 +1,7 @@
-angular
+var app = angular
     .module('pizza-shop',
         ['ui.router',
-          'WpHome'
+          'wp.home'
         ])
 
     .config(function($stateProvider, $urlRouterProvider){

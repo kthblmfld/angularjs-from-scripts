@@ -44,3 +44,5 @@ history section illustrates the relationship between scope, controllers, and the
 -----------
 
 Some sample directives. Also: Grouping of modules/refactoring around features.
+Directives in this version:
+product-directive (wp-product). Applied as an attribute in header.html.

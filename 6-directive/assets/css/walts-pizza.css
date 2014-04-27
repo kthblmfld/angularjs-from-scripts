@@ -3,7 +3,7 @@
     text-align: right;
 }
 
-.container-life-event {
+.container-life-event, .container-header{
     white-space: nowrap;
 }
 

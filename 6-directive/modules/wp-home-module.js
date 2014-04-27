@@ -1,5 +1,7 @@
 angular
-    .module('WpHome',['ui.router'])
+    .module('wp.home',[
+        // dependencies to be injected
+        'ui.router'])
     .config(function config($stateProvider, $urlRouterProvider) {
 
         var PATH_TPL = 'templates/walt/';
