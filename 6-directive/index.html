@@ -4,12 +4,13 @@
         <title>Pizza Shop</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="assets/css/walts-pizza.css" rel="stylesheet">
-        <link href="directives/product.css" rel="stylesheet">
+        <link href="dailyDeals/daily-deal.css" rel="stylesheet">
+        <link href="directions/directions.css" rel="stylesheet">
     </head>
     <body>
 
         <div class="container-fluid" ng-app="pizza-shop">
-            <header ng-include="'templates/header.html'"></header>
+            <header ng-include="'common/header.html'"></header>
             <div data-ui-view></div>
         </div>
 
@@ -17,9 +18,11 @@
         <script src="assets/js/angular-ui-router.js"></script>
         <script src="assets/js/ui-bootstrap-0.10.0.min.js"></script>
         <script src="app.js"></script>
-        <script src="directives/product-directive.js"></script>
-        <script src="controllers/menu-controller.js"></script>
-        <script src="controllers/store-hours-controller.js"></script>
-        <script src="modules/wp-home-module.js"></script>
+        <script src="directions/directions.js"></script>
+        <script src="dailyDeals/daily-deal-directive.js"></script>
+        <script src="common/wrap-with-directive.js"></script>
+        <script src="menu/menu-controller.js"></script>
+        <script src="storeHours/store-hours-controller.js"></script>
+        <script src="home/home.js"></script>
     </body>
 </html>

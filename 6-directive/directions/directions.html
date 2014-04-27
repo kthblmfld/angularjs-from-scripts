@@ -1,6 +1,6 @@
-<h2>Directions</h2>
+<h2 wp-wrap-with="purpleFrame">Directions</h2>
 <div>
-    <div class="col-md-4">
+    <div class="col-md-4" wp-wrap-with="shiny">
         <ul>
             <li>Go left. No, your other left.</li>
             <li>Put on your seatbelt.</li>
@@ -14,4 +14,10 @@
     <div class="col-md-4">
         <img class="img-thumbnail" ng-src="assets/images/directions.jpeg"/>
     </div>
+    <script id="shiny" type="text/ng-template">
+        <div class="shinyText"></div>
+    </script>
+    <script id="purpleFrame" type="text/ng-template">
+        <div class="purpleness"></div>
+    </script>
 </div>

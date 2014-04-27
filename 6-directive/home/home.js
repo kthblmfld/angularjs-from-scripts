@@ -4,7 +4,7 @@ angular
         'ui.router'])
     .config(function config($stateProvider, $urlRouterProvider) {
 
-        var PATH_TPL = 'templates/walt/';
+        var PATH_TPL = 'walt/';
 
         // For any unmatched url, redirect to /life
         $urlRouterProvider.otherwise("/life");

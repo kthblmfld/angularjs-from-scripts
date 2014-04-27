@@ -1,7 +1,8 @@
 var app = angular
     .module('pizza-shop',
         ['ui.router',
-          'wp.home'
+          'wp.home',
+          'wp.directions'
         ])
 
     .config(function($stateProvider, $urlRouterProvider){
@@ -12,27 +13,23 @@ var app = angular
 
             .state('home',{
                 url: '/home',
-                templateUrl: 'templates/home.html'
+                templateUrl: 'home/home.html'
             })
             .state('storeHours',{
                 url:'/storeHours',
-                templateUrl: "templates/storeHours.html",
+                templateUrl: "storeHours/store-hours.html",
                 controller: "StoreHoursController"
             })
             .state('menu',{
                 url: '/menu',
-                templateUrl: 'templates/menu.html',
+                templateUrl: 'menu/menu.html',
                 controller: 'MenuController'
             })
             .state('menu.ingredient',{
                 url: '/ingredient/:ingredient',
-                templateUrl:'templates/ingredients.ingredient.html',
+                templateUrl:'menu/ingredients.ingredient.html',
                 controller: function($scope, $stateParams){
                     $scope.ingredient = $stateParams.ingredient;
                 }
-            })
-            .state('directions',{
-                url: '/directions',
-                templateUrl: 'templates/directions.html'
             });
     });
