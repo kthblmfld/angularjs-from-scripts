@@ -35,18 +35,24 @@ Deeper spread of states and nesting down the path of Walt's passion
 5-scope
 -------
 
-Data sharing between different controllers using a shared service. An example on the home view
-demonstrates scope sharing between controllers using a shared service. Another example in the
-history section illustrates the relationship between scope, controllers, and the dom.
+Data sharing between different controllers using a shared service.
+### Home view example
+Demonstrates scope sharing between controllers using 3 controllers, each
+having a reference to a shared service.
+### History section - Sibling and nested scopes
+Illustrates the relationship between scope, controllers, and the dom.
 
 
 6-directive
 -----------
 
 Some sample directives. Also: Grouping of modules/refactoring around features.
-Directives in this version:
-product-directive (wp-product). Applied as an attribute in header.html, this is a basic example
+
+*Directives in this version:*
+### product-directive (wp-product)
+Applied as an attribute in header.html, this is a basic example
 of decorating attributes supplied via the dom element.
-wrap-with-directive (wp-wrap-with). Applied as an attribute in directions.html, this directive
+### wrap-with-directive (wp-wrap-with)
+Applied as an attribute in directions.html, this directive
 uses transclusion to wrap the target element with the template assigned to the directive (both
 templates defined in directions.html in this case).
