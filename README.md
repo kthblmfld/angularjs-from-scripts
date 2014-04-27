@@ -25,7 +25,8 @@ and filter it in a template.
 -----------
 
 View management using ui-router's $stateProvider. Simple example of nested states in
-ingredients section. ui-router feature not covered: Multiple (named) views.
+ingredients section.
+*ui-router feature not covered: Multiple (named) views.*
 
 4-ui-router-2
 -------------
@@ -39,7 +40,7 @@ Data sharing between different controllers using a shared service.
 ### Home view example
 Demonstrates scope sharing between controllers using 3 controllers, each
 having a reference to a shared service.
-### History section - Sibling and nested scopes
+### History section - sibling and nested scopes
 Illustrates the relationship between scope, controllers, and the dom.
 
 
@@ -48,11 +49,11 @@ Illustrates the relationship between scope, controllers, and the dom.
 
 Some sample directives. Also: Grouping of modules/refactoring around features.
 
-*Directives in this version:*
-### product-directive (wp-product)
+# Directives in this version:
+*product-directive (wp-product)*
 Applied as an attribute in header.html, this is a basic example
 of decorating attributes supplied via the dom element.
-### wrap-with-directive (wp-wrap-with)
+*wrap-with-directive (wp-wrap-with)*
 Applied as an attribute in directions.html, this directive
 uses transclusion to wrap the target element with the template assigned to the directive (both
 templates defined in directions.html in this case).
