@@ -9,6 +9,7 @@ complexity with every iteration focusing on a different aspect of the framework.
 
 For each section, open index.html to load the app.
 
+
 1-data-binding
 --------------
 
@@ -26,7 +27,8 @@ and filter it in a template.
 
 View management using ui-router's $stateProvider. Simple example of nested states in
 ingredients section.
-*ui-router feature not covered: Multiple (named) views.*
+
+**ui-router feature not covered: Multiple (named) views.**
 
 4-ui-router-2
 -------------
@@ -51,12 +53,20 @@ Some sample directives. Also: Grouping of modules/refactoring around features.
 
 ### Directives in this version:
 
-*product-directive (wp-product)*
+** product-directive (wp-product)**
 
 Applied as an attribute in header.html, this is a basic example
 of decorating attributes supplied via the dom element.
-*wrap-with-directive (wp-wrap-with)*
+
+** wrap-with-directive (wp-wrap-with)**
 
 Applied as an attribute in directions.html, this directive
 uses transclusion to wrap the target element with the template assigned to the directive (both
 templates defined in directions.html in this case).
+
+** debug-directive (wp-debug)**
+
+Example in the menu view. When applied to an element with attribute 'wp-debug', this directive renders
+both the initial expression and its output. AngularJs provides something similar with the
+'ng-non-bindable' directive, however, it only renders the unevaluated expression.
+
