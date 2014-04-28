@@ -28,7 +28,8 @@ and filter it in a template.
 View management using ui-router's $stateProvider. Simple example of nested states in
 ingredients section.
 
-**ui-router feature not covered: Multiple (named) views.**
+**Lots of additional ui-router features not covered: Multiple (named) views,
+resolve + promises, etc.**
 
 4-ui-router-2
 -------------
@@ -42,6 +43,7 @@ Data sharing between different controllers using a shared service.
 ### Home view example
 Demonstrates scope sharing between controllers using 3 controllers, each
 having a reference to a shared service.
+
 ### History section - sibling and nested scopes
 Illustrates the relationship between scope, controllers, and the dom.
 

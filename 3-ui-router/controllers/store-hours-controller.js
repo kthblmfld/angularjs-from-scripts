@@ -1,3 +1,8 @@
+/*
+  Since a controller needs to be assigned to a module, and we know app is a module at this point,
+  we assign this controller to app. If we were to assign it to angular without a module, problems
+  would ensue.
+ */
 app
     .controller('StoreHoursController', function($scope){
 
