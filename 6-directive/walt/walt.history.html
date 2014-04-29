@@ -4,8 +4,8 @@
 </p>
 
 <h3>Walt knew he had hit the big time when he
-    <span ng-repeat="event in lifeEvents">
-        {{ event }}{{$last ? '.' : ' and '}}
+    <span ng-repeat="waltEvent in waltEvents">
+        {{ waltEvent }}{{$last ? '.' : ' and '}}
     </span>
 </h3>
 
@@ -14,24 +14,24 @@
     <div class="col-md-4 col-life-event">
         <strong>Walt's Life Events:</strong>
         <ul>
-            <li ng-repeat="event in lifeEvents">
-                {{ event }}
+            <li ng-repeat="waltEvent in waltEvents">
+                {{ waltEvent }}
             </li>
         </ul>
     </div>
     <div class="col-md-4 col-life-event">
         <strong>Walt's Month Events:</strong>
         <ul ng-controller="MonthEventsController">
-            <li ng-repeat="event in lifeEvents">
-                {{ event }}
+            <li ng-repeat="waltEvent in waltEvents">
+                {{ waltEvent }}
             </li>
         </ul>
     </div>
     <div class="col-md-4 col-life-event">
         <strong>Walt's Day Events:</strong>
         <ul ng-controller="DayEventsController">
-            <li ng-repeat="event in lifeEvents">
-                {{ event }}
+            <li ng-repeat="waltEvent in waltEvents">
+                {{ waltEvent }}
             </li>
         </ul>
     </div>
@@ -42,22 +42,22 @@
     <span class="col-md-12">
         <strong>Walt's Life Events:</strong>
         <ul>
-            <li ng-repeat="event in lifeEvents">
-                {{ event }}
+            <li ng-repeat="waltEvent in waltEvents">
+                {{ waltEvent }}
             </li>
         </ul>
         <span ng-controller="MonthEventsController" class="text-info">
         <strong>Walt's Month Events:</strong>
             <ul>
-                <li ng-repeat="event in lifeEvents">
-                    {{ event }}
+                <li ng-repeat="waltEvent in waltEvents">
+                    {{ waltEvent }}
                 </li>
             </ul>
             <span ng-controller="DayEventsController" class="text-primary">
                 <strong>Walt's Day Events:</strong>
                 <ul>
-                    <li ng-repeat="event in lifeEvents">
-                        {{ event }}
+                    <li ng-repeat="waltEvent in waltEvents">
+                        {{ waltEvent }}
                     </li>
                 </ul>
             </span>

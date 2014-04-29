@@ -44,9 +44,10 @@ Data sharing between different controllers using a shared service.
 Demonstrates scope sharing between controllers using 3 controllers, each
 having a reference to a shared service.
 
-### History section - sibling and nested scopes
-Illustrates the relationship between scope, controllers, and the dom.
-
+### History section - sibling vs. nested scopes
+Illustrates the relationship between scope, controllers, the dom, and scope inheritance.
+'waltevents' are set on WaltsHistoryController and MonthEventsController, but not on DayEventsController.
+The waltHistory view renders out all of the waltevents in sibling and nested dom elements.
 
 6-directive
 -----------
