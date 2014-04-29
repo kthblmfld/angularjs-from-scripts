@@ -2,7 +2,8 @@ var app = angular
     .module('pizza-shop',
         ['ui.router',
           'wp.home',
-          'wp.directions'
+          'wp.directions',
+          'wp.storeHours'
         ])
 
     .config(function($stateProvider, $urlRouterProvider){
@@ -14,11 +15,6 @@ var app = angular
             .state('home',{
                 url: '/home',
                 templateUrl: 'home/home.html'
-            })
-            .state('storeHours',{
-                url:'/storeHours',
-                templateUrl: "storeHours/store-hours.html",
-                controller: "StoreHoursController"
             })
             .state('menu',{
                 url: '/menu',

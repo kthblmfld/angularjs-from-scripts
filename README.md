@@ -73,3 +73,7 @@ Example in the menu view. When applied to an element with attribute 'wp-debug', 
 both the initial expression and its output. AngularJs provides something similar with the
 'ng-non-bindable' directive, however, it only renders the unevaluated expression.
 
+** draggable-directive (wp-debug)**
+
+Used in the storehours page, this directive applies drag and
+drop to the applied element.
