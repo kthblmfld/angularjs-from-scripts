@@ -6,7 +6,7 @@
         <strong>Toppings:</strong>
         <div>
             <span ng-repeat="ingredient in pizza.ingredients">
-                <a data-ng-href="#/menu/ingredient/{{ ingredient }}">{{ ingredient }}</a>{{$last ? '' : ', '}}
+                <a data-ui-sref="menu.ingredient({ ingredient:ingredient })">{{ ingredient }}</a>{{$last ? '' : ', '}}
             </span>
         </div>
 
